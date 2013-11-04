@@ -1464,3 +1464,425 @@ INFO  [2013-11-04 21:07:28,065] org.eclipse.jetty.server.handler.ContextHandler:
 INFO  [2013-11-04 21:07:28,166] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
 INFO  [2013-11-04 21:07:28,166] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
 INFO  [2013-11-04 21:07:28,661] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+INFO  [2013-11-04 21:13:18,460] org.reflections.Reflections: Reflections took 81 ms to scan 1 urls, producing 5 keys and 8 values 
+DEBUG [2013-11-04 21:13:18,465] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/05322.book.orders. Topic name is /topic/05322.book.*
+DEBUG [2013-11-04 21:13:18,465] edu.sjsu.cmpe.library.LibraryService: libraryName:library-a
+WARN  [2013-11-04 21:13:18,483] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-04 21:13:18,537] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-04 21:13:18,539] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-04 21:13:18,630] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-04 21:13:18,697] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-04 21:13:18,697] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-04 21:13:18,991] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-04 21:13:19,015] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-04 21:13:19,017] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-04 21:13:19,028] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-04 21:13:19,029] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-04 21:13:19,029] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-04 21:13:19,030] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2013-11-04 21:13:19,030] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-04 21:13:19,030] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-04 21:13:19,030] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-04 21:13:19,032] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-04 21:13:19,032] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.library.api.resources.subscribeResource]
+INFO  [2013-11-04 21:13:19,077] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2013-11-04 21:13:19,104] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:13:19,111] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+ERROR [2013-11-04 21:14:02,028] com.yammer.dropwizard.jersey.LoggingExceptionMapper: Error handling a request: 512ddc6d27ac173a
+! javax.jms.JMSException: Operation timed out
+! at org.fusesource.stomp.jms.StompJmsExceptionSupport.create(StompJmsExceptionSupport.java:59) ~[stompjms-client-1.13.jar:1.13]
+! at org.fusesource.stomp.jms.StompChannel.connect(StompChannel.java:112) ~[stompjms-client-1.13.jar:1.13]
+! at org.fusesource.stomp.jms.StompJmsConnection.getChannel(StompJmsConnection.java:347) ~[stompjms-client-1.13.jar:1.13]
+! at org.fusesource.stomp.jms.StompJmsConnection.connect(StompJmsConnection.java:395) ~[stompjms-client-1.13.jar:1.13]
+! at org.fusesource.stomp.jms.StompJmsConnection.start(StompJmsConnection.java:197) ~[stompjms-client-1.13.jar:1.13]
+! at edu.sjsu.cmpe.library.api.resources.BookResource.updateBookStatus(BookResource.java:120) ~[classes/:na]
+! at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.6.0_51]
+! at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39) ~[na:1.6.0_51]
+! at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_51]
+! at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_51]
+! at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.yammer.metrics.jersey.InstrumentedResourceMethodDispatchProvider$TimedRequestDispatcher.dispatch(InstrumentedResourceMethodDispatchProvider.java:32) ~[metrics-jersey-2.2.0.jar:na]
+! at com.yammer.dropwizard.jersey.OptionalResourceMethodDispatchAdapter$OptionalRequestDispatcher.dispatch(OptionalResourceMethodDispatchAdapter.java:37) ~[dropwizard-core-0.6.2.jar:na]
+! at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.ResourceObjectRule.accept(ResourceObjectRule.java:100) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1511) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1442) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) [jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) [jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) [jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) [metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) [dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:680) [na:1.6.0_51]
+! java.io.IOException: Operation timed out
+! at sun.nio.ch.FileDispatcher.read0(Native Method) ~[na:1.6.0_51]
+! at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:21) ~[na:1.6.0_51]
+! at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198) ~[na:1.6.0_51]
+! at sun.nio.ch.IOUtil.read(IOUtil.java:171) ~[na:1.6.0_51]
+! at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245) ~[na:1.6.0_51]
+! at org.fusesource.hawtdispatch.transport.AbstractProtocolCodec.read(AbstractProtocolCodec.java:326) ~[hawtdispatch-transport-1.12.jar:1.12]
+! at org.fusesource.hawtdispatch.transport.TcpTransport.drainInbound(TcpTransport.java:657) ~[hawtdispatch-transport-1.12.jar:1.12]
+! at org.fusesource.hawtdispatch.transport.TcpTransport$6.run(TcpTransport.java:538) ~[hawtdispatch-transport-1.12.jar:1.12]
+! at org.fusesource.hawtdispatch.internal.NioDispatchSource$3.run(NioDispatchSource.java:226) ~[hawtdispatch-1.12.jar:1.12]
+! at org.fusesource.hawtdispatch.internal.SerialDispatchQueue.run(SerialDispatchQueue.java:96) ~[hawtdispatch-1.12.jar:1.12]
+! at org.fusesource.hawtdispatch.internal.pool.SimpleThread.run(SimpleThread.java:77) ~[hawtdispatch-1.12.jar:1.12]
+INFO  [2013-11-04 21:20:17,246] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:20:17,246] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:20:17,247] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:20:17,247] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:20:19,299] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:20:19,299] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:20:19,401] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  [2013-11-04 21:20:19,401] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+INFO  [2013-11-04 21:24:40,211] org.reflections.Reflections: Reflections took 98 ms to scan 1 urls, producing 5 keys and 8 values 
+DEBUG [2013-11-04 21:24:40,214] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/05322.book.orders. Topic name is /topic/05322.book.*
+DEBUG [2013-11-04 21:24:40,214] edu.sjsu.cmpe.library.LibraryService: libraryName:library-a
+WARN  [2013-11-04 21:24:40,237] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-04 21:24:40,316] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-04 21:24:40,318] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-04 21:24:40,428] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-04 21:24:40,520] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-04 21:24:40,520] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-04 21:24:40,854] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-04 21:24:40,885] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-04 21:24:40,887] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-04 21:24:40,898] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-04 21:24:40,899] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-04 21:24:40,900] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-04 21:24:40,900] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2013-11-04 21:24:40,900] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-04 21:24:40,900] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-04 21:24:40,901] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-04 21:24:40,903] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-04 21:24:40,903] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.library.api.resources.subscribeResource]
+INFO  [2013-11-04 21:24:40,932] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2013-11-04 21:24:40,958] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:24:40,963] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:25:07,000] org.reflections.Reflections: Reflections took 81 ms to scan 1 urls, producing 5 keys and 8 values 
+DEBUG [2013-11-04 21:25:07,003] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/05322.book.orders. Topic name is /topic/05322.book.*
+DEBUG [2013-11-04 21:25:07,003] edu.sjsu.cmpe.library.LibraryService: libraryName:library-a
+WARN  [2013-11-04 21:25:07,023] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-04 21:25:07,071] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-04 21:25:07,073] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-04 21:25:07,165] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-04 21:25:07,230] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-04 21:25:07,231] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-04 21:25:07,520] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-04 21:25:07,545] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-04 21:25:07,547] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-04 21:25:07,559] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-04 21:25:07,559] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-04 21:25:07,560] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-04 21:25:07,561] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2013-11-04 21:25:07,561] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-04 21:25:07,561] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-04 21:25:07,561] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-04 21:25:07,563] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-04 21:25:07,563] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.library.api.resources.subscribeResource]
+INFO  [2013-11-04 21:25:07,591] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+WARN  [2013-11-04 21:25:07,620] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED InstrumentedBlockingChannelConnector@0.0.0.0:8001: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at sun.nio.ch.Net.bind(Native Method) ~[na:1.6.0_51]
+! at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:124) ~[na:1.6.0_51]
+! at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:59) ~[na:1.6.0_51]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.open(BlockingChannelConnector.java:127) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector.doStart(BlockingChannelConnector.java:85) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at edu.sjsu.cmpe.library.LibraryService.main(LibraryService.java:25) [classes/:na]
+WARN  [2013-11-04 21:25:07,623] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED SocketConnector@0.0.0.0:9001: java.net.BindException: Address already in use
+! java.net.BindException: Address already in use
+! at java.net.PlainSocketImpl.socketBind(Native Method) ~[na:1.6.0_51]
+! at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521) ~[na:1.6.0_51]
+! at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414) ~[na:1.6.0_51]
+! at java.net.ServerSocket.bind(ServerSocket.java:326) ~[na:1.6.0_51]
+! at java.net.ServerSocket.<init>(ServerSocket.java:192) ~[na:1.6.0_51]
+! at java.net.ServerSocket.<init>(ServerSocket.java:148) ~[na:1.6.0_51]
+! at org.eclipse.jetty.server.bio.SocketConnector.newServerSocket(SocketConnector.java:96) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.bio.SocketConnector.open(SocketConnector.java:85) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.bio.SocketConnector.doStart(SocketConnector.java:156) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.doStart(Server.java:291) [jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) [jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at edu.sjsu.cmpe.library.LibraryService.main(LibraryService.java:25) [classes/:na]
+WARN  [2013-11-04 21:25:07,624] org.eclipse.jetty.util.component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@6883fde6: MultiException[java.net.BindException: Address already in use, java.net.BindException: Address already in use]
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at edu.sjsu.cmpe.library.LibraryService.main(LibraryService.java:25) [classes/:na]
+ERROR [2013-11-04 21:25:07,624] com.yammer.dropwizard.cli.ServerCommand: Unable to start server, shutting down
+! org.eclipse.jetty.util.MultiException: Multiple exceptions
+! at org.eclipse.jetty.server.Server.doStart(Server.java:273) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.cli.ServerCommand.run(ServerCommand.java:48) ~[dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.EnvironmentCommand.run(EnvironmentCommand.java:39) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:58) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.cli.Cli.run(Cli.java:53) [dropwizard-core-0.6.2.jar:na]
+! at com.yammer.dropwizard.Service.run(Service.java:61) [dropwizard-core-0.6.2.jar:na]
+! at edu.sjsu.cmpe.library.LibraryService.main(LibraryService.java:25) [classes/:na]
+INFO  [2013-11-04 21:25:07,625] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:25:07,625] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:25:07,627] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:25:07,628] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:25:09,629] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:25:09,629] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:25:09,731] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  [2013-11-04 21:25:09,731] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+INFO  [2013-11-04 21:25:13,097] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:25:13,097] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:25:13,100] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:25:13,100] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:25:15,153] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:25:15,154] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:25:15,255] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  [2013-11-04 21:25:15,255] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+INFO  [2013-11-04 21:25:26,694] org.reflections.Reflections: Reflections took 84 ms to scan 1 urls, producing 5 keys and 8 values 
+DEBUG [2013-11-04 21:25:26,697] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/05322.book.orders. Topic name is /topic/05322.book.*
+DEBUG [2013-11-04 21:25:26,697] edu.sjsu.cmpe.library.LibraryService: libraryName:library-a
+WARN  [2013-11-04 21:25:26,717] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-04 21:25:26,775] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-04 21:25:26,778] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-04 21:25:26,907] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-04 21:25:26,985] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-04 21:25:26,986] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-04 21:25:27,369] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-04 21:25:27,401] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-04 21:25:27,404] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-04 21:25:27,416] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-04 21:25:27,418] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-04 21:25:27,419] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-04 21:25:27,420] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2013-11-04 21:25:27,420] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-04 21:25:27,420] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-04 21:25:27,420] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-04 21:25:27,423] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-04 21:25:27,423] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.library.api.resources.subscribeResource]
+INFO  [2013-11-04 21:25:27,452] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2013-11-04 21:25:27,483] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:25:27,488] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:29:11,241] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:9001
+INFO  [2013-11-04 21:29:11,242] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:29:11,243] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:29:11,243] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:29:13,297] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/john/cmpe273-Assignment2/library/target/classes/}
+INFO  [2013-11-04 21:29:13,297] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+INFO  [2013-11-04 21:29:13,399] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+INFO  [2013-11-04 21:29:13,399] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+INFO  [2013-11-04 21:29:19,108] org.reflections.Reflections: Reflections took 78 ms to scan 1 urls, producing 5 keys and 8 values 
+DEBUG [2013-11-04 21:29:19,111] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/05322.book.orders. Topic name is /topic/05322.book.*
+DEBUG [2013-11-04 21:29:19,111] edu.sjsu.cmpe.library.LibraryService: libraryName:library-a
+WARN  [2013-11-04 21:29:19,130] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-04 21:29:19,189] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-04 21:29:19,191] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-04 21:29:19,274] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-04 21:29:19,338] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-04 21:29:19,338] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-04 21:29:19,626] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-04 21:29:19,651] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-04 21:29:19,653] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-04 21:29:19,664] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-04 21:29:19,664] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-04 21:29:19,665] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-04 21:29:19,666] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2013-11-04 21:29:19,666] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-04 21:29:19,666] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-04 21:29:19,666] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-04 21:29:19,668] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-04 21:29:19,668] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.library.api.resources.subscribeResource]
+INFO  [2013-11-04 21:29:19,694] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2013-11-04 21:29:19,715] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-04 21:29:19,721] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001

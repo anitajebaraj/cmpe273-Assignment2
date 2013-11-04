@@ -5,8 +5,7 @@ alert('hkjgjk')
     $.ajax({
       url: '/library/v1/books/'+isbn+"?status=lost",
       type: 'PUT',
-      data: "status=lost",
-      success: function(data) {
+      success: function() {
         alert('Load was performed.');
         window.location.reload();
       }
