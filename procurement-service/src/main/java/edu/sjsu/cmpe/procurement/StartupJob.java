@@ -31,7 +31,7 @@ import edu.sjsu.cmpe.procurement.resource.PointToPoint;
 import edu.sjsu.cmpe.procurement.resource.PublishService;
 
 
-@Every("1mn")
+@Every("5mn")
 public class StartupJob extends Job
 {
 	

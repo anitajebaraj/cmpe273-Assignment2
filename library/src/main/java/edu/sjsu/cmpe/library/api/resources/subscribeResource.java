@@ -15,7 +15,7 @@ import de.spinscale.dropwizard.jobs.annotations.Every;
 import edu.sjsu.cmpe.library.repository.BookRepository;
 import edu.sjsu.cmpe.library.repository.BookRepositoryInterface;
 
-@Every("1mn")
+@Every("5mn")
 public class subscribeResource extends Job {
 	
 	public subscribeResource()
