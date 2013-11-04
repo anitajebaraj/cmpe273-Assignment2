@@ -49,8 +49,7 @@ public class Book {
 
     @NotEmpty
     private String category;
-    @NotEmpty
-    public String id;
+
     private static ConcurrentHashMap<Long, Book> newBookHashMap;
    
 	public static ConcurrentHashMap<Long, Book> getNewBookHashMap() {
