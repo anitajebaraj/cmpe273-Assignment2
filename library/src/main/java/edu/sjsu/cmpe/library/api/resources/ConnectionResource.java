@@ -64,10 +64,14 @@ public void subscribeToBookOrders() throws JMSException, MalformedURLException
 		
 		if(book==null)
 		{
+			
 			Book newBook=new Book();
+			System.out.println("values[3]=="+values[3]);
+			String coverImage=values[3]+":"+values[4];
+			
 			newBook.setIsbn(orderIsbn);
 			newBook.setTitle(values[1]);
-			//newBook.setCoverimage(new URL(values[3]));
+			newBook.setCoverimage(new URL(coverImage));
 			newBook.setCategory(values[2]);
 			Status status=Status.available;
 			newBook.setStatus(status);
