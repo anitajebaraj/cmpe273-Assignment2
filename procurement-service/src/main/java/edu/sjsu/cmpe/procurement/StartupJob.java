@@ -73,8 +73,9 @@ public void doJob(){
   
    // HTTP GET
     //if(book.getOrderIsbnList().get(0)==null)
-	 
-	WebResource webResourceForGet = client
+    Client clientGet = Client.create(); 
+    
+	WebResource webResourceForGet = clientGet
 	   .resource("http://54.215.210.214:9000/orders/05322");
 
 	ClientResponse responseFromGet = webResourceForGet.accept("application/json")
