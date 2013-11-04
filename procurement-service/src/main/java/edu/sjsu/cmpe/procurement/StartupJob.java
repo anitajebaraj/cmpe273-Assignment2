@@ -58,9 +58,8 @@ public void doJob(){
 			
 		if(!book.getOrderIsbnList().isEmpty())
 		{
+			//Http POST
 	Client client = Client.create(); 
-	//Http POST
-	
     WebResource webResourceForPost = client.resource("http://54.215.210.214:9000/orders");  
     String input = "{\"id\":\"05322\",\"order_book_isbns\":"+book.getOrderIsbnList()+"}";
     System.out.println("input=="+input);
@@ -74,20 +73,19 @@ public void doJob(){
    // HTTP GET
     //if(book.getOrderIsbnList().get(0)==null)
     Client clientGet = Client.create(); 
-    
+    System.out.println("client is created");
 	WebResource webResourceForGet = clientGet
 	   .resource("http://54.215.210.214:9000/orders/05322");
-
+System.out.println("web resource is ok");
 	ClientResponse responseFromGet = webResourceForGet.accept("application/json")
                .get(ClientResponse.class);
-
+System.out.println("client response is ok");
 	if (responseFromGet.getStatus() != 200) {
 	   throw new RuntimeException("Failed : HTTP error code : "
 		+ responseFromGet.getStatus());
 	}
 
 	String output = responseFromGet.getEntity(String.class);
-  
 	System.out.println("Output from Server .... \n");
 	System.out.println(output);
 	
