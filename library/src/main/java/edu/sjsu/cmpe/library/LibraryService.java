@@ -42,10 +42,7 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 	String queueName = configuration.getStompQueueName();
 	String topicName = configuration.getStompTopicName();
 	String libraryName= configuration.getLibraryName();
-	String user =LibraryServiceConfiguration.getApolloUser();
-	String password = LibraryServiceConfiguration.getApolloPassword();
-	String host = LibraryServiceConfiguration.getApolloHost();
-	int port = LibraryServiceConfiguration.getApolloPort();
+
 	log.debug("Queue name is {}. Topic name is {}", queueName,
 		topicName);
 	log.debug("libraryName:"+libraryName);
