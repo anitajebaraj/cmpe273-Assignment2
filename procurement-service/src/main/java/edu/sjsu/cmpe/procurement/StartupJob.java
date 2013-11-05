@@ -93,7 +93,7 @@ System.out.println("before GET");
     String responseMsg=responseFromPost.getEntity(String.class);
 	
 	//logic for publishing the output from server to library
-	
+    System.out.println("before parse");
 	PublishService pubSub=new PublishService();
 	System.out.println("before parse");
 	//parsing output
