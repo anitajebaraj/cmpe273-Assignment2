@@ -95,16 +95,18 @@ System.out.println("before GET");
 	//logic for publishing the output from server to library
 	
 	PublishService pubSub=new PublishService();
+	System.out.println("before parse");
 	//parsing output
 	//replace publish with parsing the output and use pubishservice in parser
 	try {
-		pubSub.parseOutputFromServer(output);
+		System.out.println("on parse");
+		pubSub.parseOutputFromServer(book.getResponseFromGet());
 	} catch (JsonProcessingException e) {
-		
-		e.printStackTrace();
+		System.out.println("JsonProcessingException in parser");
+		//e.printStackTrace();
 	} catch (IOException e) {
 		System.out.println("IO Exception in parser");
-		e.printStackTrace();
+		//e.printStackTrace();
 	} catch (ParseException e) {
 		
 		e.printStackTrace();
