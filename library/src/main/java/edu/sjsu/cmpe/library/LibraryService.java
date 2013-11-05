@@ -42,11 +42,15 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 	String queueName = configuration.getStompQueueName();
 	String topicName = configuration.getStompTopicName();
 	String libraryName= configuration.getLibraryName();
+	String user =LibraryServiceConfiguration.getApolloUser();
+	String password = LibraryServiceConfiguration.getApolloPassword();
+	String host = LibraryServiceConfiguration.getApolloHost();
+	int port = LibraryServiceConfiguration.getApolloPort();
 	log.debug("Queue name is {}. Topic name is {}", queueName,
 		topicName);
 	log.debug("libraryName:"+libraryName);
-	// TODO: Apollo STOMP Broker URL and login
-	
+	//log.debug("user=="+user+"  pwd==="+password+"  host=="+host+"  port==="+port);
+
 	/** Root API */
 	environment.addResource(RootResource.class);
 	/** Books APIs */

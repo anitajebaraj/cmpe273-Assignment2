@@ -13,9 +13,13 @@ public class LibraryServiceConfiguration extends Configuration {
     @NotEmpty
     @JsonProperty
     static String stompTopicName;
+    @NotEmpty
+    @JsonProperty
     static String libraryName;
-    
-    public String getLibraryName() {
+
+ 
+
+	public String getLibraryName() {
 		return libraryName;
 	}
 

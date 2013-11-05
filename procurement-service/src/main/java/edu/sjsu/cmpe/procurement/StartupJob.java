@@ -70,8 +70,8 @@ public void doJob(){
 		      
 		    System.out.println("Response " + responseFromPost.getEntity(String.class));
 
-		    String responseMsg=responseFromPost.getEntity(String.class);	
-		    System.out.println("responseMsg===="+responseMsg);
+		   // String responseMsg=responseFromPost.getEntity(String.class);	
+		   // System.out.println("responseMsg===="+responseMsg);
 			}
 			catch(Exception e)
 			{
@@ -79,7 +79,7 @@ public void doJob(){
 				e.printStackTrace();
 			}
 			
-  
+			
    // HTTP GET
 			try
 			{
@@ -111,10 +111,10 @@ public void doJob(){
 		pubSub.parseOutputFromServer(book.getResponseFromGet());
 	} catch (JsonProcessingException e) {
 		System.out.println("JsonProcessingException in parser");
-		//e.printStackTrace();
+		e.printStackTrace();
 	} catch (IOException e) {
 		System.out.println("IO Exception in parser");
-		//e.printStackTrace();
+		e.printStackTrace();
 	} catch (ParseException e) {
 		
 		e.printStackTrace();
