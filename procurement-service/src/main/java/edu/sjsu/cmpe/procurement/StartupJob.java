@@ -100,16 +100,16 @@ System.out.println("before GET");
 	try {
 		pubSub.parseOutputFromServer(output);
 	} catch (JsonProcessingException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
+		System.out.println("IO Exception in parser");
 		e.printStackTrace();
 	} catch (ParseException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	} catch (JMSException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 		

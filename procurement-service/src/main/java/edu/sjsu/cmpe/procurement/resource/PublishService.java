@@ -76,6 +76,7 @@ private static String env(String key, String defaultValue) {
    }
 public void parseOutputFromServer(String output) throws JsonProcessingException, IOException, ParseException, JMSException
 {
+	System.out.println("checking in parser");
 	JSONObject jsnobject = new JSONObject(output);
 	System.out.println("hello checking");
 	 JSONArray jArray = jsnobject.getJSONArray("shipped_books");
