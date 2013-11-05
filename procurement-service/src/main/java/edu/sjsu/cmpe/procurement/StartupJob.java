@@ -67,11 +67,9 @@ public void doJob(){
 		    String input = "{\"id\":\"05322\",\"order_book_isbns\":"+book.getOrderIsbnList()+"}";
 		    System.out.println("input=="+input);
 		    ClientResponse responseFromPost = webResourceForPost.type(MediaType.APPLICATION_JSON).post(ClientResponse.class, input);
-		      
-		    System.out.println("Response " + responseFromPost.getEntity(String.class));
-
-		   // String responseMsg=responseFromPost.getEntity(String.class);	
-		   // System.out.println("responseMsg===="+responseMsg);
+		    String responseMsg=responseFromPost.getEntity(String.class);	
+		    System.out.println("responseMsg===="+responseMsg);
+		   
 			}
 			catch(Exception e)
 			{
