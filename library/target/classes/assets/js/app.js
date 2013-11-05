@@ -1,4 +1,3 @@
-
 $(":button").click(function() {
 var isbn = this.id;
     $.ajax({
