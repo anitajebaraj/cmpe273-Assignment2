@@ -74,15 +74,14 @@ public void doJob(){
     //if(book.getOrderIsbnList().get(0)==null)
     Client clientGet = Client.create(); 
     System.out.println("client is created");
-	WebResource webResourceForGet = clientGet
-	   .resource("http://54.215.210.214:9000/orders/05322");
-System.out.println("web resource is ok");
-	ClientResponse responseFromGet = webResourceForGet.accept("application/json")
-               .get(ClientResponse.class);
+	//WebResource webResourceForGet = clientGet.resource("http://54.215.210.214:9000/orders/05322");
+	WebResource webResourceForGet = clientGet.resource("http://ip.jsontest.com/");
+
+	System.out.println("web resource is ok");
+	ClientResponse responseFromGet = webResourceForGet.accept("application/json").get(ClientResponse.class);
 System.out.println("client response is ok");
 	if (responseFromGet.getStatus() != 200) {
-	   throw new RuntimeException("Failed : HTTP error code : "
-		+ responseFromGet.getStatus());
+	   throw new RuntimeException("Failed : HTTP error code : "+ responseFromGet.getStatus());
 	}
 
 	String output = responseFromGet.getEntity(String.class);
