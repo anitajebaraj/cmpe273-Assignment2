@@ -42,10 +42,20 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 	String queueName = configuration.getStompQueueName();
 	String topicName = configuration.getStompTopicName();
 	String libraryName= configuration.getLibraryName();
-
+	String apolloUser= configuration.getApolloUser();
+	String passwordName= configuration.getApolloPassword();
+	String hostName =  configuration.getApolloHost();
+	String portName= configuration.getApolloPort();
+	
+	
+	
 	log.debug("Queue name is {}. Topic name is {}", queueName,
 		topicName);
 	log.debug("libraryName:"+libraryName);
+	log.debug("apolloUser:"+apolloUser);
+	log.debug("passwordName:"+passwordName);
+	log.debug("hostName:"+hostName);
+	log.debug("portName:"+portName);
 	//log.debug("user=="+user+"  pwd==="+password+"  host=="+host+"  port==="+port);
 
 	/** Root API */

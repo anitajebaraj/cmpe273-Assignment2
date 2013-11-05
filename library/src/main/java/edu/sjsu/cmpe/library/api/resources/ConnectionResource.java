@@ -30,15 +30,15 @@ public void subscribeToBookOrders() throws JMSException, MalformedURLException
 	LibraryServiceConfiguration configuration=new LibraryServiceConfiguration();
 	String topicName = configuration.getStompTopicName();
 	System.out.println("destination=="+topicName);
-	String user = env("APOLLO_USER", "admin");
+	/*String user = env("APOLLO_USER", "admin");
 	String password = env("APOLLO_PASSWORD", "password");
 	String host = env("APOLLO_HOST", "54.215.210.214");
-	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
-	/*String user =configuration.getApolloUser();
+	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));*/
+	String user =configuration.getApolloUser();
 		String password = configuration.getApolloPassword();
 		String host = configuration.getApolloHost();
-		int port = configuration.getApolloPort();*/
-		//System.out.println("user=="+user+"  pwd==="+password+"  host=="+host+"  port==="+port);
+		int port =  Integer.parseInt(configuration.getApolloPort());
+		System.out.println("user=="+user+"  pwd==="+password+"  host=="+host+"  port==="+port);
 
 	String body="";
 	StompJmsConnectionFactory factory = new StompJmsConnectionFactory();

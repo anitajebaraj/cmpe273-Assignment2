@@ -8,16 +8,59 @@ import com.yammer.dropwizard.config.Configuration;
 public class LibraryServiceConfiguration extends Configuration {
     @NotEmpty
     @JsonProperty
-     static String stompQueueName;
+     private static String stompQueueName;
 
     @NotEmpty
     @JsonProperty
-    static String stompTopicName;
+    private static String stompTopicName;
     @NotEmpty
     @JsonProperty
-    static String libraryName;
-
+    private static String libraryName;
+    @NotEmpty
+    @JsonProperty
+    private static String apolloUser;
+    @NotEmpty
+    @JsonProperty
+    private static String apolloPassword;
+    @NotEmpty
+    @JsonProperty
+    private static String apolloHost;
+    @NotEmpty
+    @JsonProperty
+    private static String apolloPort;
  
+
+	public String getApolloUser() {
+		return apolloUser;
+	}
+
+	public String getApolloPort() {
+		return apolloPort;
+	}
+
+	public void setApolloPort(String apolloPort) {
+		this.apolloPort = apolloPort;
+	}
+
+	public void setApolloUser(String apolloUser) {
+		this.apolloUser = apolloUser;
+	}
+
+	public String getApolloPassword() {
+		return apolloPassword;
+	}
+
+	public void setApolloPassword(String apolloPassword) {
+		this.apolloPassword = apolloPassword;
+	}
+
+	public String getApolloHost() {
+		return apolloHost;
+	}
+
+	public void setApolloHost(String apolloHost) {
+		this.apolloHost = apolloHost;
+	}
 
 	public String getLibraryName() {
 		return libraryName;

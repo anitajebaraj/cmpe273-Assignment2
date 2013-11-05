@@ -107,14 +107,15 @@ book.setStatus(status);
 if(status.toString()=="lost")
 {
 	LibraryServiceConfiguration configuration=new LibraryServiceConfiguration();
-	String user = env("APOLLO_USER", "admin");
+	/*String user = env("APOLLO_USER", "admin");
 	String password = env("APOLLO_PASSWORD", "password");
 	String host = env("APOLLO_HOST", "54.215.210.214");
-	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
-	/*String user =configuration.getApolloUser();
+	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));*/
+	String user =configuration.getApolloUser();
 	String password = configuration.getApolloPassword();
 	String host = configuration.getApolloHost();
-	int port = configuration.getApolloPort();*/
+	System.out.println("port"+configuration.getApolloPort());
+	int port = Integer.parseInt(configuration.getApolloPort());
 	System.out.println("user=="+user+"  pwd==="+password+"  host=="+host+"  port==="+port);
 	
 	String queue = configuration.getStompQueueName();
