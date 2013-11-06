@@ -22,7 +22,6 @@ public class BookRepository implements BookRepositoryInterface {
     public BookRepository() {
 	bookInMemoryMap = seedData();
 	isbnKey = 0;
-	System.out.println("#########ALERT###########");
 	Book.setNewBookHashMap(bookInMemoryMap);
     }
 
