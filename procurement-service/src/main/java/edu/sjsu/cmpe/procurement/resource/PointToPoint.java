@@ -37,7 +37,7 @@ public class PointToPoint {
 		book.setOrderIsbnList(orderIsbnList);
 		String user = env("APOLLO_USER", "admin");
 		String password = env("APOLLO_PASSWORD", "password");
-		String host = env("APOLLO_HOST", "54.215.210.214");
+		String host = env("APOLLO_HOST", "54.219.156.168");
 		int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
 		
 
