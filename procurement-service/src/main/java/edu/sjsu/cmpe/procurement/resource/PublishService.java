@@ -38,7 +38,7 @@ public void publishServiceToLibrary(String data,String category) throws JMSExcep
 	System.out.println("getting in");
 	String user = env("APOLLO_USER", "admin");
 	String password = env("APOLLO_PASSWORD", "password");
-	String host = env("APOLLO_HOST", "54.215.210.214");
+	String host = env("APOLLO_HOST", "54.219.156.168");
 	int port = Integer.parseInt(env("APOLLO_PORT", "61613"));
 	StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
 	factory.setBrokerURI("tcp://" + host + ":" + port);
